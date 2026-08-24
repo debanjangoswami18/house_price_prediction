@@ -7,7 +7,7 @@ model = joblib.load("house_price_model.pkl")
 st.title("🏠 House Price Prediction")
 st.write("Enter the house details to predict the estimated price.")
 
-area = st.number_input("House Area", min_value=0.0, value=2000.0)
+area = st.number_input("House Area", min_value=500.0, max_value=10000.0, value=2000.0, step=100.0)
 bedrooms = st.number_input("Number of Bedrooms", min_value=1, value=3)
 bathrooms = st.number_input("Number of Bathrooms", min_value=1, value=2)
 age = st.number_input("House Age", min_value=0, value=5)
